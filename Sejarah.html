@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Provinsi Kepulauan Bangka Belitung</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b3d;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.05) 0,
+                rgba(255,255,255,0.05) 40px,
+                transparent 40px,
+                transparent 80px
+            );
+            color: #fff;
+        }
+
+        /* HEADER */
+        header {
+            height: 70px;
+            background: #0a1530;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 110px);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background: #101c40;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .sidebar li:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* CONTENT */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .card {
+            background: #1a265a;
+            width: 380px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.6;
+            padding: 0 15px 15px;
+            color: #dcdcdc;
+        }
+
+        /* FOOTER */
+        footer {
+            height: 40px;
+            background: #0a1530;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="d:\Documents\SEMESTER 4\Sistem Informasi Manajemen\Project Provinsi\Logo Babel.png" alt="Logo">
+            <span>PROVINSI KEPULAUAN<br><b>BANGKA BELITUNG</b></span>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+     
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <div class="card">
+                <img src="d:\Documents\SEMESTER 4\Sistem Informasi Manajemen\Project Provinsi\Sejarah.jpg" alt="Sejarah Bangka Belitung">
+                <h2>Sejarah Bumi Serumpun Sebalai</h2>
+                <p>
+                    Provinsi Kepulauan Bangka Belitung dikenal sebagai
+                    “Bumi Serumpun Sebalai” yang melambangkan persatuan
+                    dan kebersamaan masyarakatnya sejak dahulu.
+                </p>
+                <p>
+                    Sejarah daerah ini erat kaitannya dengan perdagangan timah
+                    serta perpaduan budaya Melayu dan Tionghoa yang hidup
+                    berdampingan secara harmonis.
+                </p>
+            </div>
+        </main>
+
+    </div>
+
+   <footer>
+                <div>
+                    <strong>Provinsi Kepulauan Bangka Belitung</strong><br>
+                    Jl. Pulau Lepar, Komplek Perkantoran Terpadu Pemerintah Provinsi Bangka Belitung
+                </div>
+                <div style="text-align: right">
+                    Telepon : 0717-6242141<br>
+                    Email : informasi@babelprov.go.id
+                </div>
+            </footer>
+        </main>
+    </div>
+
+</body>
+</html>

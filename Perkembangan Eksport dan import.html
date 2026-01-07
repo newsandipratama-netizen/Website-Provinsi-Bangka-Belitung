@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ekspor Impor - Babel</title>
+    <style>
+        :root {
+            --bg-dark: #1a2639;
+            --card-bg: #ffffff;
+            --primary-blue: #2c5282;
+            --accent-red: #e53e3e;
+            --text-light: #cbd5e0;
+            --text-dark: #2d3748;
+            --sidebar-active: #5a67d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            /* Menciptakan efek pola geometris di background */
+            background-image: 
+                linear-gradient(30deg, #151d2a 12%, transparent 12.5%, transparent 87%, #151d2a 87.5%, #151d2a),
+                linear-gradient(150deg, #151d2a 12%, transparent 12.5%, transparent 87%, #151d2a 87.5%, #151d2a),
+                linear-gradient(30deg, #151d2a 12%, transparent 12.5%, transparent 87%, #151d2a 87.5%, #151d2a),
+                linear-gradient(150deg, #151d2a 12%, transparent 12.5%, transparent 87%, #151d2a 87.5%, #151d2a),
+                linear-gradient(60deg, #1e2a3d 25%, transparent 25.5%, transparent 75%, #1e2a3d 75.5%, #1e2a3d),
+                linear-gradient(60deg, #1e2a3d 25%, transparent 25.5%, transparent 75%, #1e2a3d 75.5%, #1e2a3d);
+            background-size: 80px 140px;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Top Navigation */
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            padding: 20px 50px;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Content Area (White Box) */
+        .main-content {
+            background: var(--card-bg);
+            flex: 3;
+            border-radius: 4px;
+            padding: 30px;
+            color: var(--text-dark);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+        }
+
+        .description {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Chart Styling Placeholder */
+        .chart-container {
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .chart-title {
+            color: #c53030;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .bar-wrapper {
+            display: flex;
+            align-items: flex-end;
+            gap: 40px;
+            height: 200px;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60px;
+        }
+
+        .bar-red { background: var(--accent-red); width: 40px; transition: 0.3s; position: relative; }
+        .bar-blue { background: var(--primary-blue); width: 40px; transition: 0.3s; position: relative; }
+        
+        .val-label {
+            font-size: 10px;
+            position: absolute;
+            top: -15px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .side-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .side-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .side-item.active {
+            background: var(--sidebar-active);
+            border-left: 3px solid #fff;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 50px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            font-size: 0.7rem;
+            margin-top: 15px;
+        }
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+        .box { width: 12px; height: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div><strong>PROVINSI KEPULAUAN BANGKA BELITUNG</strong></div>
+        <nav>
+            <ul>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <h2>Perkembangan Ekspor dan Impor</h2>
+            <p class="description">
+                Nilai ekspor Provinsi Kepulauan Bangka Belitung pada Agustus 2019 bernilai 98,1 juta dolar AS, turun 48,53 persen dibanding Agustus 2018. Sementara Januari-Agustus 2019, Singapura menyerap 37,74 persen (439,5 juta dolar AS) ekspor timah.
+            </p>
+
+            <div class="chart-container">
+                <div class="chart-title">Perkembangan Ekspor</div>
+                <div class="bar-wrapper">
+                    <div class="bar-group">
+                        <div class="bar-blue" style="height: 60px;"><span class="val-label">47.7</span></div>
+                        <div class="bar-red" style="height: 140px;"><span class="val-label">142.9</span></div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar-blue" style="height: 40px;"><span class="val-label">27.8</span></div>
+                        <div class="bar-red" style="height: 58px;"><span class="val-label">58.1</span></div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar-red" style="height: 93px;"><span class="val-label">93.5</span></div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><div class="box" style="background:var(--accent-red)"></div> TIMAH</div>
+                    <div class="legend-item"><div class="box" style="background:var(--primary-blue)"></div> NON TIMAH</div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+         
+        </aside>
+    </div>
+
+    <footer>
+        <div>Provinsi Kepulauan Bangka Belitung<br>Jl. Pulau Lepar, Komplek Perkantoran Terpadu</div>
+        <div style="text-align: right;">Telepon: 0717-4343141<br>Email: informasi@babelprov.go.id</div>
+    </footer>
+
+</body>
+</html>

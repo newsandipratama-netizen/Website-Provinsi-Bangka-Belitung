@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Provinsi Kepulauan Bangka Belitung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background-color: #1a233a;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #242f4d;
+            display: flex;
+            padding: 0 50px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .nav-item {
+            color: #ccc;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background-color: #313d5e;
+            color: white;
+        }
+
+        .active {
+            background-color: #6366f1;
+            color: white;
+        }
+
+        /* DROPDOWN MENU */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #242f4d;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-top: 3px solid #6366f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #ccc;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #313d5e;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #313d5e;
+            color: white;
+        }
+
+        /* HERO SECTION (BACKGROUND BESAR) */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Ukuran besar memenuhi layar */
+            background-image: url('Background.jpeg'); /* FOTO BACKGROUND ANDA */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+
+        .officials-container img {
+            max-width: 1100px;
+            width: 95%;
+            height: auto;
+            /* Memberi efek bayangan agar gambar pejabat menyatu */
+            filter: drop-shadow(0 -5px 15px rgba(0,0,0,0.5));
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            header, nav { padding: 10px 20px; }
+            .nav-item span { display: none; } /* Hanya ikon di mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="d:\Documents\SEMESTER 4\Sistem Informasi Manajemen\Project Provinsi\Logo Babel.png" alt="Logo" style="height: 50px; width: auto; object-fit: contain;">
+    
+    <h3 style="letter-spacing: 2px; color: white; margin: 0;">
+        PROVINSI KEPULAUAN 
+        <span style="background: #003d4d; padding: 2px 5px; color: white;">BANGKA BELITUNG</span>
+    </h3>
+</div>
+        <div style="font-size: 12px; opacity: 0.8;">
+            Media Sosial Kami | babelprov.go.id <i class="fas fa-mouse-pointer"></i>
+        </div>
+    </header>
+
+    <nav>
+        
+        
+        
+        <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-Home"></i> <span>Pemerintah</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                
+                <a href="Sejarah.html">Sejarah</a>
+                <a href="Ruang Lingkup.html">Ruang Lingkup</a>
+                <a href="Lambang Daerah.html">Lambang Daerah</a>
+                <a href="Aspek Geografis.html">Aspek Geografis</a>
+                <a href="Alamat Kantor.html">Alamat Kantor</a>
+                <a href="Potensi Investasi.html">Potensi Investasi</a>
+                <a href="Menuju Industri 4,0.html">Menuju Industri 4,0</a>
+                <a href="Pertambangan Penyokong Perekonomian.html">Pertambangan Penyokong Perekonomian</a>
+                <a href="Perkembangan Eksport dan import.html">Perkembangan Ekspor dan import</a>
+               
+            
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-"></i> <span>Wisata</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                <a href="Wisata.html">Wisata</a>
+                
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-"></i> <span>Budaya</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                <a href="Budaya Babel.html">Budaya Babel</a>
+                
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-"></i> <span>Kuliner</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                <a href="Kuliner Babel.html">Kuliner Babel</a>
+                
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-maps"></i> <span>Peta</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                  <a href="Peta Babel.html">Peta Babel</a>
+                
+            </div>
+        </div>
+
+         <div class="dropdown">
+            <div class="nav-item"><i class="fas fa-maps"></i> <span>Flora dan Fauna</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
+            <div class="dropdown-content">
+                  <a href="Flora dan Fauna.html">Flora dan Fauna</a>
+                
+            </div>
+        </div>
+        
+
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            
+        </div>
+
+        <div class="officials-container">
+            <img src="d:\Documents\SEMESTER 4\Sistem Informasi Manajemen\Project Provinsi\Alamat kantor.jpg" alt="">
+        </div>
+    </section>
+
+    </style>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provinsi Kepulauan Bangka Belitung</title>
+    <style>
+        :root {
+            --primary: #003d4d;
+            --dark: #00796b;
+            --light: #f5f5f5;
+            --teal: #00796b;
+            --gray: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .logo h1 span {
+            font-size: 1.1rem;
+            display: block;
+            font-weight: 400;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Navigasi */
+        nav {
+            background: var(--dark);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--teal);
+            border-radius: 4px;
+        }
+
+        nav .active {
+            background: var(--teal);
+            border-radius: 4px;
+        }
+
+
+
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #333;
+            text-align: center;
+        }
+
+
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .video-section {
+                flex-direction: column;
+            }
+            .layanan {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  </style>
+</head>
+<body>
+
+  
+
+    </ul>
+  </div>
+</div>
+
+  </div>
+
+   <footer>
+    Provinsi Kepulauan Bangka Belitung<br>
+    Jl. Pulau Lepar, Komplek Perkantoran Terpadu Pemerintah Provinsi Kepulauan Bangka Belitung<br>
+    Telepon: 0771-624241 | Faksimile: 0771-624241 | Email: informasi@babelprov.go.id
+  </footer>
+
+</body>
+</html>

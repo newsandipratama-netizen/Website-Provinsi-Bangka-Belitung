@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertambangan Penopang Perekonomian</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+
+/* ===== BODY ===== */
+body{
+    background:#0e1a33;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+.header{
+    background:#1b2d52;
+    padding:10px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.logo{
+    width:38px;height:38px;
+    background:#fff;border-radius:50%;
+}
+.header-title{font-weight:bold;letter-spacing:1px}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#223b6d;
+    padding:10px 30px;
+    display:flex;
+    gap:25px;
+    font-size:14px;
+}
+.navbar a{color:#fff;text-decoration:none}
+.navbar a:hover{text-decoration:underline}
+
+/* ===== BACKGROUND ===== */
+.main{
+    position:relative;
+    padding:40px 0 80px;
+    background:
+      repeating-linear-gradient(
+        -25deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 60px,
+        transparent 60px,
+        transparent 120px
+      );
+}
+
+/* ===== LAYOUT ===== */
+.container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 280px;
+    gap:30px;
+}
+
+/* ===== CONTENT CARD ===== */
+.card{
+    background:#fff;
+    color:#000;
+    border-radius:6px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card h2{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.card p{
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:10px;
+    text-align:justify;
+}
+
+.section-title{
+    font-weight:bold;
+    margin:15px 0 5px;
+    font-size:14px;
+}
+
+/* ===== TABLE ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+thead{background:#e21d2f;color:#fff}
+th,td{
+    border:1px solid #ccc;
+    padding:5px;
+}
+th{text-align:center}
+td:nth-child(1){text-align:center;width:35px}
+td:last-child{text-align:right}
+.total{
+    background:#e21d2f;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    background:#1b2d52;
+    border-radius:6px;
+    padding:15px;
+    height:fit-content;
+}
+.sidebar h4{
+    font-size:14px;
+    margin-bottom:10px;
+}
+.sidebar ul{list-style:none}
+.sidebar li{
+    padding:8px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    font-size:13px;
+}
+.sidebar li:hover{background:rgba(255,255,255,0.1);cursor:pointer}
+.sidebar .active{
+    background:#7a2cff;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:#1b2d52;
+    padding:15px 30px;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+        <div class="logo"></div>
+        <div class="header-title">PROVINSI KEPULAUAN BANGKA BELITUNG</div>
+    </div>
+    <div>Media Sosial Kominfo</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="container">
+
+<!-- CONTENT -->
+<div class="card">
+
+<h2>Pertambangan Penopang Perekonomian</h2>
+
+<p>
+Provinsi Kepulauan Bangka Belitung merupakan daerah yang potensial di bidang pertambangan,
+karena terdapat banyak kandungan mineral logam. Aktivitas pertambangan berperan besar dalam
+mendukung perekonomian daerah.
+</p>
+
+<p>
+Potensi pertambangan terbesar adalah timah. Selain itu terdapat juga bauksit, monasit,
+dan mineral lainnya yang tersebar di beberapa kabupaten/kota.
+</p>
+
+<div class="section-title">
+Potensi Sumber Daya Mineral Logam dalam Ton Menurut Kabupaten/Kota
+</div>
+
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Kab/Kota</th>
+<th>Jenis Mineral</th>
+<th>Potensi (Ton)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Bangka</td><td>Timah</td><td>2.056.428</td></tr>
+<tr><td></td><td></td><td>Bauksit</td><td>852.500</td></tr>
+<tr><td></td><td></td><td>Monasit</td><td>619</td></tr>
+
+<tr><td>2</td><td>Belitung</td><td>Timah</td><td>188.317</td></tr>
+<tr><td></td><td></td><td>Monasit</td><td>3.404</td></tr>
+
+<tr><td>3</td><td>Bangka Barat</td><td>Timah</td><td>1.020.270</td></tr>
+<tr><td></td><td></td><td>Monasit</td><td>62.328</td></tr>
+<tr><td></td><td></td><td>Xenotim</td><td>14</td></tr>
+<tr><td></td><td></td><td>Diabas</td><td>53.469.466</td></tr>
+
+<tr><td>4</td><td>Bangka Tengah</td><td>Timah Placer</td><td>10.794</td></tr>
+<tr><td></td><td></td><td>Timah</td><td>778.507</td></tr>
+
+<tr><td>5</td><td>Bangka Selatan</td><td>Monasit</td><td>67.632</td></tr>
+<tr><td></td><td></td><td>Besi Primer</td><td>24.666</td></tr>
+<tr><td></td><td></td><td>Timah</td><td>438.328</td></tr>
+
+<tr><td>6</td><td>Belitung Timur</td><td>Monasit</td><td>182</td></tr>
+<tr><td></td><td></td><td>Besi Primer</td><td>180.487</td></tr>
+
+<tr><td>7</td><td>Pangkalpinang</td><td>Seng</td><td>10.232</td></tr>
+<tr><td></td><td></td><td>Timah</td><td>798.832</td></tr>
+
+<tr class="total">
+<td colspan="3">Jumlah Total</td>
+<td>53.649.765.524</td>
+</tr>
+
+</tbody>
+</table>
+
+<p style="font-size:11px;margin-top:8px;">
+Sumber: DSDM Provinsi Kepulauan Bangka Belitung, Laporan Potensi SDM Tahun 2017
+</p>
+
+</div>
+
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+Provinsi Kepulauan Bangka Belitung — Komplek Perkantoran Pemerintah Provinsi
+</div>
+
+</body>
+</html>

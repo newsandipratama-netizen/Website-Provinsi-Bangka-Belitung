@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Dropdown</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar container */
+        .navbar {
+            display: flex;
+            background-color: #2c3e50;
+            padding: 0 20px;
+        }
+
+        /* Dropdown wrapper */
+        .dropdown {
+            position: relative;
+        }
+
+        /* Main nav item */
+        .nav-item {
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-item:hover {
+            background-color: #34495e;
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+
+    <div class="dropdown">
+        <div class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Pemerintah</span>
+            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+        </div>
+        <div class="dropdown-content">
+            <a href="Sejarah.html">Sejarah</a>
+            <a href="Ruang Lingkup.html">Ruang Lingkup</a>
+            <a href="Lambang Daerah.html">Lambang Daerah</a>
+            <a href="Aspek Geografis.html">Aspek Geografis</a>
+            <a href="#">Profil & LHKPN Pimpinan</a>
+            <a href="Alamat Kantor.html">Alamat Kantor</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Wisata</span>
+            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+        </div>
+        <div class="dropdown-content">
+            <a href="#">Potensi Investasi</a>
+            <a href="#">Menuju Industri 4.0</a>
+            <a href="#">Pertambangan Penyokong Perekonomian</a>
+            <a href="#">Komoditas Unggulan dan Perdagangan 4.0</a>
+            <a href="#">Perkembangan Ekspor dan Impor</a>
+            <a href="#">Sektor Agrikultural</a>
+            <a href="#">Sektor Peternakan dan Perikanan</a>
+            <a href="#">Transportasi</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Budaya</span>
+            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+        </div>
+        <div class="dropdown-content">
+            <a href="#">Dokumen Perencanaan</a>
+            <a href="#">Transparansi Anggaran</a>
+            <a href="#">Statistik Pegawai</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Kuliner</span>
+            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+        </div>
+        <div class="dropdown-content">
+            <a href="#">Dokumen Perencanaan</a>
+            <a href="#">Transparansi Anggaran</a>
+            <a href="#">Statistik Pegawai</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
